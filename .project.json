@@ -1,0 +1,29 @@
+{
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZSD_BARCOD_SCANNER_V2_SRV/",
+    "metadataFilePath": "localService/metadata.xml",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "deploy": {
+    "destination": "EFD",
+    "name": "ZSD_BARCOD_SCAN"
+  },
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "com.watt.common.builder.sapui5clientbuild"
+  ],
+  "build": {
+    "buildRequired": false,
+    "targetFolder": "dist",
+    "lastBuildDateTime": "Wed, 24 Nov 2021 12:45:02 GMT"
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "",
+    "defaultLanguage": "",
+    "defaultI18NPropertyFile": "",
+    "resourceModelName": ""
+  }
+}

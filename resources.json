@@ -1,0 +1,71 @@
+{
+    "resources": [
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "model/formatter.js"
+        },
+        {
+            "name": "view/Detail.view.xml"
+        },
+        {
+            "name": "view/Master.view.xml"
+        },
+        {
+            "name": "view/Main.view.xml"
+        },
+        {
+            "name": "view/BarcodInput.fragment.xml"
+        },
+        {
+            "name": "view/pdf.fragment.xml"
+        },
+        {
+            "name": "controller/Detail.controller.js"
+        },
+        {
+            "name": "controller/Master.controller.js"
+        },
+        {
+            "name": "controller/Main.controller.js"
+        },
+        {
+            "name": "i18n/i18n_tr.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "resources.json",
+            "merged": true
+        },
+        {
+            "name": ".project.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": ".user.project.json"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        }
+    ]
+}

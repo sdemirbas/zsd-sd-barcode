@@ -1,0 +1,144 @@
+{
+    "_version": "1.7.0",
+    "sap.app": {
+        "id": "com.eurogidaZSD_BARCOD_SCANNER",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "sourceTemplate": {
+            "id": "ui5template.basicSAPUI5ApplicationProject",
+            "version": "1.40.12"
+        },
+        "dataSources": {
+            "ZSD_BARCOD_SCANNER_V2_SRV": {
+                "uri": "/sap/opu/odata/sap/ZSD_BARCOD_SCANNER_V2_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata.xml"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "com.eurogidaZSD_BARCOD_SCANNER.view.Main",
+            "type": "XML"
+        },
+        "dependencies": {
+            "minUI5Version": "1.30.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {},
+                "sap.ushell": {},
+                "sap.collaboration": {},
+                "sap.ui.comp": {},
+                "sap.uxap": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.eurogidaZSD_BARCOD_SCANNER.i18n.i18n"
+                }
+            },
+            "ServisOdata": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "None",
+                    "useBatch": false
+                },
+                "dataSource": "ZSD_BARCOD_SCANNER_V2_SRV",
+                "preload": true
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "targets": {
+                "Master": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearAggregation": true,
+                    "viewName": "Master",
+                    "viewLevel": 1,
+                    "controlAggregation": "masterPages"
+                },
+                "Detail": {
+                    "viewType": "XML",
+                    "viewLevel": 2,
+                    "transition": "slide",
+                    "clearAggregation": true,
+                    "viewName": "Detail",
+                    "controlAggregation": "detailPages"
+                }
+            },
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "controlId": "mainApp",
+                "viewPath": "com.eurogidaZSD_BARCOD_SCANNER.view"
+            },
+            "routes": [
+                {
+                    "name": "Master",
+                    "pattern": "",
+                    "titleTarget": "",
+                    "greedy": false,
+                    "target": [
+                        "Master"
+                    ],
+                    "subroutes": [
+                        {
+                            "name": "Detail",
+                            "pattern": "Detail",
+                            "target": [
+                                "Detail"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "sap.platform.abap": {
+        "uri": "/sap/bc/ui5_ui5/sap/zsd_barcod_scan",
+        "_version": "1.1.0"
+    }
+}
